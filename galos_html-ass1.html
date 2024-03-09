@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Custom color scheme */
+        .primary-color {
+            background: rgb(255, 21, 21);
+            border: solid 1px black;
+        }
+
+        .secondary-color {
+            background: rgb(255, 248, 40);
+            border: solid 1px black;
+        }
+
+        .tertriary-color {
+            background: rgb(247, 6, 122);
+            border: solid 1px black;
+        }
+
+        .quarter-color {
+            background: rgb(255, 119, 0);
+            border: solid 1px black;
+        }
+
+        /* Component styles */
+        header,
+        nav,
+        footer {
+            flex: 0 0 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main,
+        aside {
+            flex: 1.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        main.side {
+            flex: 3;
+        }
+
+        main.side div,
+        aside div {
+            text-align: center;
+            padding: 2rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="primary-color">
+        <h1>Header</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="quarter-color">
+        <h1>Navigation</h1>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="secondary-color side">
+            <div>
+                <h1>Side Content</h1>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="tertriary-color side">
+            <div class="side">
+                <h1>Main Content</h1>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="secondary-color side">
+            <div>
+                <h1>Side Content</h1>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="primary-color">
+        <h1>Footer</h1>
+    </footer>
+</body>
+</html>
